@@ -1,3 +1,4 @@
+import logoImg from "@/assets/logo-img.jpg";
 import { personalData } from "@/lib/data";
 
 export default function Hero() {
@@ -12,21 +13,26 @@ export default function Hero() {
           <div className="mb-8">
             <div className="w-48 h-48 mx-auto rounded-full overflow-hidden shadow-2xl border-4 border-white bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
               <div className="text-6xl text-blue-600">
-                <i className="fas fa-user"></i>
+                <img src={logoImg} alt="Ibrahim Alderini" className="mt-9" />
               </div>
             </div>
           </div>
-          
+
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-slate-900">
-            Hi, I'm <span className="text-blue-600">{personalData.firstName}</span>
+            Hi, I'm{" "}
+            <span className="text-blue-600">{personalData.firstName}</span>
             <div className="animate-bounce-gentle inline-block">👋</div>
           </h1>
-          
+
           <p className="text-xl sm:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto">
-            {personalData.title} with <span className="font-semibold text-blue-600">{personalData.yearsExperience} years</span> 
-            of experience crafting exceptional user experiences with React and modern web technologies
+            {personalData.title} with{" "}
+            <span className="font-semibold text-blue-600">
+              {personalData.yearsExperience} years{" "}
+            </span>
+            of experience crafting exceptional user experiences with React and
+            modern web technologies
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <a
               href="#contact"
@@ -41,7 +47,7 @@ export default function Hero() {
               View My Work
             </a>
           </div>
-          
+
           <div className="flex justify-center space-x-6">
             <a
               href={personalData.linkedin}
@@ -52,7 +58,7 @@ export default function Hero() {
               <i className="fab fa-linkedin text-2xl"></i>
             </a>
             <a
-              href="#"
+              href={personalData.github}
               className="text-slate-400 hover:text-blue-600 transform hover:scale-125 transition-all duration-300"
             >
               <i className="fab fa-github text-2xl"></i>

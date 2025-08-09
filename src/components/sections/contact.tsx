@@ -1,7 +1,7 @@
-import { personalData } from "@/lib/data";
-import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { personalData } from "@/lib/data";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { useState } from "react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -12,11 +12,13 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -50,13 +52,13 @@ export default function Contact() {
     try {
       // In a real implementation, you would send this to a backend service
       // For now, we'll simulate the form submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
       toast({
         title: "Message Sent!",
         description: "Thank you for your message. I'll get back to you soon!",
       });
-      
+
       // Reset form
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
@@ -74,17 +76,19 @@ export default function Contact() {
     <section id="contact" className="py-20 bg-slate-900 text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Let's Work Together</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+            Let's Work Together
+          </h2>
           <div className="w-20 h-1 bg-blue-400 mx-auto"></div>
           <p className="text-xl text-slate-300 mt-6 max-w-2xl mx-auto">
             Ready to bring your next project to life? I'd love to hear from you.
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-up">
             <h3 className="text-2xl font-semibold mb-8">Get In Touch</h3>
-            
+
             <div className="space-y-6">
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
@@ -95,7 +99,7 @@ export default function Contact() {
                   <div className="text-slate-300">{personalData.email}</div>
                 </div>
               </div>
-              
+
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
                   <MapPin className="text-white w-5 h-5" />
@@ -105,7 +109,7 @@ export default function Contact() {
                   <div className="text-slate-300">{personalData.location}</div>
                 </div>
               </div>
-              
+
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
                   <Phone className="text-white w-5 h-5" />
@@ -116,7 +120,7 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-            
+
             <div className="flex space-x-6 mt-8">
               <a
                 href={personalData.linkedin}
@@ -127,7 +131,7 @@ export default function Contact() {
                 <i className="fab fa-linkedin text-white"></i>
               </a>
               <a
-                href="#"
+                href={personalData.github}
                 className="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors duration-300"
               >
                 <i className="fab fa-github text-white"></i>
@@ -140,11 +144,16 @@ export default function Contact() {
               </a>
             </div>
           </div>
-          
+
           <div className="animate-slide-up">
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
-                <label className="block text-sm font-medium mb-2" htmlFor="name">Name</label>
+                <label
+                  className="block text-sm font-medium mb-2"
+                  htmlFor="name"
+                >
+                  Name
+                </label>
                 <input
                   type="text"
                   id="name"
@@ -156,9 +165,14 @@ export default function Contact() {
                   disabled={isSubmitting}
                 />
               </div>
-              
+
               <div>
-                <label className="block text-sm font-medium mb-2" htmlFor="email">Email</label>
+                <label
+                  className="block text-sm font-medium mb-2"
+                  htmlFor="email"
+                >
+                  Email
+                </label>
                 <input
                   type="email"
                   id="email"
@@ -170,9 +184,14 @@ export default function Contact() {
                   disabled={isSubmitting}
                 />
               </div>
-              
+
               <div>
-                <label className="block text-sm font-medium mb-2" htmlFor="message">Message</label>
+                <label
+                  className="block text-sm font-medium mb-2"
+                  htmlFor="message"
+                >
+                  Message
+                </label>
                 <textarea
                   id="message"
                   name="message"
@@ -184,7 +203,7 @@ export default function Contact() {
                   disabled={isSubmitting}
                 />
               </div>
-              
+
               <button
                 type="submit"
                 disabled={isSubmitting}

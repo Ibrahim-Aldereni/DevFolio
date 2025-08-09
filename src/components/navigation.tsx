@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { personalData } from "@/lib/data";
+import { useState } from "react";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -16,11 +16,16 @@ export default function Navigation() {
   return (
     <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200/50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="font-bold text-xl text-slate-800">
-            {personalData.name}
+        <div className="flex items-center justify-between h-16 ">
+          <div className="font-bold text-xl text-slate-800 flex items-baseline gap-2 max-lg:flex-col max-lg:gap-0">
+            <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
+              {personalData.name}
+            </span>
+            <span className="text-[12px] text-slate-500">
+              {personalData.title}
+            </span>
           </div>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {navLinks.map((link) => (
@@ -33,7 +38,7 @@ export default function Navigation() {
               </a>
             ))}
           </div>
-          
+
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
@@ -45,7 +50,7 @@ export default function Navigation() {
           </div>
         </div>
       </div>
-      
+
       {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-slate-200">

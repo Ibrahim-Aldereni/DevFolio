@@ -6,8 +6,10 @@ export const personalData = {
   phone: "+962 77 513 2111",
   email: "ibrahemaldrynee@gmail.com",
   linkedin: "https://linkedin.com/in/ibrahim-aldereni",
+  github: "https://github.com/IbrahimAldereni-socuimtech",
   yearsExperience: "4+",
-  description: "Dynamic Senior Frontend Developer with over 4 years of experience delivering exceptional user-centric applications. Expertise in crafting high-quality frontend solutions using JavaScript and React. Committed to continuous improvement and adopting innovative technologies to drive project success.",
+  description:
+    "Dynamic Senior Frontend Developer with over 4 years of experience delivering exceptional user-centric applications. Expertise in crafting high-quality frontend solutions using JavaScript and React. Committed to continuous improvement and adopting innovative technologies to drive project success.",
 };
 
 export const experience = [
@@ -90,7 +92,8 @@ export const projects = [
     id: 1,
     name: "Audience Town",
     url: "https://www.audiencetown.com",
-    description: "Developed React components for targeted advertising campaigns, collaborating with cross-functional teams to integrate new features and optimize user engagement.",
+    description:
+      "Developed React components for targeted advertising campaigns, collaborating with cross-functional teams to integrate new features and optimize user engagement.",
     technologies: ["React", "JavaScript", "CSS"],
     icon: "fas fa-globe",
     gradient: "from-blue-100 to-purple-100",
@@ -100,7 +103,8 @@ export const projects = [
     id: 2,
     name: "Reverifi",
     url: "https://www.reverifi.com",
-    description: "Built the React-based frontend from the ground up, overseeing integrations and ensuring efficient, user-friendly interfaces for verification services.",
+    description:
+      "Built the React-based frontend from the ground up, overseeing integrations and ensuring efficient, user-friendly interfaces for verification services.",
     technologies: ["React", "TypeScript", "Styled Components"],
     icon: "fas fa-shield-alt",
     gradient: "from-green-100 to-teal-100",
@@ -110,7 +114,8 @@ export const projects = [
     id: 3,
     name: "Hearst Magazines",
     url: null,
-    description: "Contributed to multiple magazine projects with React, integrating GraphQL endpoints and collaborating with various teams to deliver engaging digital experiences.",
+    description:
+      "Contributed to multiple magazine projects with React, integrating GraphQL endpoints and collaborating with various teams to deliver engaging digital experiences.",
     technologies: ["React", "GraphQL", "Node.js"],
     icon: "fas fa-newspaper",
     gradient: "from-red-100 to-pink-100",
@@ -120,7 +125,8 @@ export const projects = [
     id: 4,
     name: "CDS Global Payment Widget",
     url: null,
-    description: "Maintained and improved the payment widget using React and Vue, utilizing AWS Lambda for serverless backend solutions as the senior frontend lead.",
+    description:
+      "Maintained and improved the payment widget using React and Vue, utilizing AWS Lambda for serverless backend solutions as the senior frontend lead.",
     technologies: ["React", "Vue.js", "AWS Lambda"],
     icon: "fas fa-credit-card",
     gradient: "from-yellow-100 to-orange-100",
@@ -174,7 +180,7 @@ export const certifications = [
 
 export const stats = {
   yearsExperience: "4+",
-  projectsCompleted: "20+",
+  projectsCompleted: "5+",
   technologiesMastered: "10+",
-  clientsSatisfied: "15+",
+  clientsSatisfied: "7+",
 };
