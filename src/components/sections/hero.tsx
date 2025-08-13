@@ -40,12 +40,6 @@ export default function Hero() {
             >
               Get In Touch
             </a>
-            <a
-              href="#projects"
-              className="border border-slate-300 text-slate-700 px-8 py-4 rounded-lg font-semibold hover:bg-slate-50 hover:border-slate-400 transition-all duration-300"
-            >
-              View My Work
-            </a>
           </div>
 
           <div className="flex justify-center space-x-6">
